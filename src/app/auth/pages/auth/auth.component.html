@@ -1,0 +1,41 @@
+<div class="container-fluid bg-degradado">
+  <div class="row">
+
+    <!-- COLUMNA IZQUIERDA -->
+    <div class="col-md-3 register-left">
+        <div class="animate__animated animate__bounce animate__slower animate__infinite">
+          <img src="../../../../assets/images/Logo-ProGolf.png" alt="Logo progolf">
+        </div>
+        <h3>
+          <strong>BIENVENIDO</strong>
+        </h3>
+        <p>Analizamos y te enseñamos a mejorar tu swing con tecnología de punta</p>
+        <a href="https://progolfanalysis.com/" class="btn btn-dark mb-4">
+          <strong>REGRESAR</strong>
+        </a>
+    </div>
+    <!-- FIN COLUMNA IZQUIERDA -->
+
+    <!-- COLUMNA DERECHA -->
+    <div class="col-md-9 register-right">
+      <!-- SELECCION DE FORMULARIOS -->
+      <ul class="nav nav-tabs nav-justified">
+        <li class="nav-item">
+          <a routerLink="registro" class="nav-link show active">Registrarse</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="login" class="nav-link show active">Iniciar Sesión</a>
+        </li>
+
+        
+      </ul>
+      <!-- FIN SELECCION DE FORMULARIOS -->
+      <div class="tab-content">
+        <div class="container">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+    <!-- FIN COLUMNA DERECHA -->
+  </div>
+</div>

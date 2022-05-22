@@ -1,0 +1,50 @@
+<div class="animate__animated animate__fadeIn animate__fast">
+  <h3 class="register-heading">
+      <strong>REGISTRARSE</strong>
+    </h3>
+    <!-- INICIO DE FORMULARIO -->
+    <form action="" class="p-5" autocomplete="off" [formGroup]="userForm" (ngSubmit)="crearUsuario()">
+      <div class="row register-form">
+        <!-- COLUMNA IZQUIERDA DE INPUTS -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <input tabindex="1" formControlName="nombre" type="text" class="form-control" placeholder="Nombre(s)" name="nombre" id="Nombre" required>
+          </div>
+          <div class="form-group">
+            <input tabindex="3" formControlName="telefono" type="tel" class="form-control" placeholder="Teléfono" name="telefono" id="Telefono" required>
+          </div>
+          <div class="form-group">
+            <input tabindex="5" formControlName="cp" type="text" class="form-control" placeholder="Código Postal" name="cp" id="Cp" required>
+          </div>
+          <div class="form-group">
+            <input tabindex="7" formControlName="correo" type="email" class="form-control" placeholder="Correo electrónico" name="correo" id="Correo" required>
+          </div>
+        </div>
+        <!-- FIN COLUMNA IZQUIERDA DE INPUTS -->
+  
+        <!-- INICIO COLUMNA DERECHA DE INPUTS -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <input tabindex="2" formControlName="apellido" type="text" class="form-control" placeholder="Apellido(s)" name="apellido" id="Apellido" required>
+          </div>
+          <div class="form-group">
+            <input tabindex="4" formControlName="sc" type="text" class="form-control" placeholder="¿Eres socio de algún club?" name="sc" id="Socio" required>
+          </div>
+          <div class="form-group">
+            <input tabindex="6" formControlName="password" type="password" class="form-control" placeholder="Contraseña" name="password" id="Password" required>
+          </div>
+          <div class="form-group">
+            <div class="max1">
+              <label class="radio inline">
+                <input formControlName="tc" type="radio" name="terminos" value="terminos" required="">
+                <span> Acepto términos y condiciones </span>
+            </label>
+            </div>
+          </div>
+          <input type="submit" class="btnRegister" value="Registrarme" [disabled]="userForm.invalid">
+        </div>
+        <!-- FIN COLUMNA DERECHA DE INPUTS -->
+      </div>
+    </form>
+    <!-- FIN FORMULARIO -->
+</div>

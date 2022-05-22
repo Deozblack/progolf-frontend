@@ -1,0 +1,228 @@
+<div class="main-content index-banner2">
+  <div class="section__content section__content--p30">
+    <div class="container-fluid">
+      <h1 class="text-white mb-5">Mi Perfil</h1>
+      <div class="row">
+        <div class="col-lg-6">
+          <form class="form-horizontal"
+          >
+            <div class="card">
+              <div class="card-header">
+                <strong>Información Personal</strong>
+              </div>
+              <div class="card-body card-block">
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Nombre</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Nombre"
+                      name="nombre"
+                      class="form-control"
+                      placeholder="Nombre"
+                      value="{{usuario.nombre}}"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Apellido</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Apellido"
+                      name="apellido"
+                      placeholder="Apellido"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Teléfono</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Telefono"
+                      name="telefono"
+                      class="form-control"
+                      placeholder="Teléfono"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Fecha Nacimiento</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="date"
+                      id="Fecha"
+                      name="fecha"
+                      class="form-control"
+                      value="0000-00-00"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Dirección</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Direccion"
+                      name="direccion"
+                      class="form-control"
+                      placeholder="Dirección"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Código Postal</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Cp"
+                      name="cp"
+                      class="form-control"
+                      placeholder="Código postal"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Estado</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Estado"
+                      name="estado"
+                      class="form-control"
+                      placeholder="Estado"
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col col-md-3">
+                    <label for="text-input" class="form-control-label"
+                      >Ciudad</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-9">
+                    <input
+                      type="text"
+                      id="Ciudad"
+                      name="ciudad"
+                      class="form-control"
+                      placeholder="Ciudad"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-right">
+                <button type="submit" class="btn btn-dark btn-md">
+                  <i class="zmdi zmdi-save"></i> Guardar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-6">
+          <form
+            action="php/actions/modificar-contrasena.php"
+            method="post"
+            class="form-horizontal"
+          >
+            <div class="card">
+              <div class="card-header">
+                <strong>Cambiar Contraseña</strong>
+              </div>
+              <div class="card-body card-block">
+                <div class="row form-group">
+                  <div class="col-12 col-md-9">
+                    <label for="hf-text" class="form-control-label"
+                      >Antigua Contraseña</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <input
+                      type="password"
+                      name="old"
+                      class="form-control"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-12 col-md-9">
+                    <label for="hf-text" class="form-control-label"
+                      >Nueva Contraseña</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <input
+                      type="password"
+                      name="new"
+                      class="form-control"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="row form-group">
+                  <div class="col-12 col-md-9">
+                    <label for="hf-text" class="form-control-label"
+                      >Confirmar Contraseña</label
+                    >
+                  </div>
+                  <div class="col-12 col-md-12">
+                    <input
+                      type="password"
+                      name="confirmar"
+                      class="form-control"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-9">
+                  <input
+                    type="hidden"
+                    name="correo"
+                    value="jesusmendezhilario@gmail.com"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div class="card-footer text-right">
+                <button type="submit" class="btn btn-dark btn-md">
+                  <i class="zmdi zmdi-save"></i> Guardar
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
