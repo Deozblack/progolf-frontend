@@ -29,9 +29,7 @@ export class AuthService {
           localStorage.setItem('token', resp.token!);
             this._usuario = {
               uid: resp.uid!,
-              nombre: resp.nombre!,
-              apellido: resp.apellido!,
-              correo: resp.correo!
+              nombre: resp.nombre!
             }
             console.log(this._usuario);
         }
@@ -41,6 +39,25 @@ export class AuthService {
     )
   }
 
+  crearUsuario(nombre: string, apellido: string, telefono:number, sc:string, cp: number, password:string, correo:string){
+    const url = `${this.baseUrl}/users/new`;
+    const body = {nombre, apellido, telefono, sc, cp, password, correo};
+    
+    return this.http.post<User>(url, body).pipe(
+      tap(resp => {
+        if (resp.ok) {
+          localStorage.setItem('token', resp.token!);
+            this._usuario = {
+              uid: resp.uid!,
+              nombre: resp.nombre!
+            }
+            console.log(this._usuario);
+        }
+      }),
+      map(resp => resp.ok),
+      catchError(err => of(err.error.msg))
+    )
+  }
 
   validarToken(): Observable<boolean>{
     const headers = new HttpHeaders()
@@ -54,9 +71,7 @@ export class AuthService {
           localStorage.setItem('token',resp.token!);
             this._usuario = {
               uid: resp.uid!,
-              nombre: resp.nombre!,
-              apellido: resp.apellido!,
-              correo: resp.correo!
+              nombre: resp.nombre!
             }     
           return resp.ok;
         }),
@@ -65,15 +80,6 @@ export class AuthService {
   }
 
 
-  crearUsuario(nombre: string, apellido: string, telefono:number, sc:string, cp: number, password:string, correo:string){
-    const url = `${this.baseUrl}/users/new`;
-    const body = {nombre, apellido, telefono, sc, cp, password, correo};
-    
-    return this.http.post<User>(url, body).pipe(
-      map(resp => resp.ok),
-      catchError(err => of(err.error.msg))
-    )
-  }
 
 
 
