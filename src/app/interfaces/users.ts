@@ -1,7 +1,7 @@
 export interface User{
     ok?: boolean;
     _id?: string;
-    uid?: string;
+    uid: string;
     token?: string;
     nombre?: string;
     apellido?: string;

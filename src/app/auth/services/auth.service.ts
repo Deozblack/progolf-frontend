@@ -85,6 +85,15 @@ export class AuthService {
   }
 
 
+  mostrarUsuario(id: string){
+    const headers = new HttpHeaders()
+    .set('x-token', localStorage.getItem('token') || '');
+
+    const url = `${this.baseUrl}/users/user/${id} `;
+    return this.http.get<{usuario:User}>(url, {headers})
+  }
+
+
 
 
 
