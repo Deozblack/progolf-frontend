@@ -29,7 +29,11 @@ export class AuthService {
           localStorage.setItem('token', resp.token!);
             this._usuario = {
               uid: resp.uid!,
-              nombre: resp.nombre!
+              nombre: resp.nombre!,
+              apellido: resp.apellido!,
+              telefono: resp.telefono!,
+              cp: resp.cp!,
+              correo: resp.correo!
             }
             console.log(this._usuario);
         }
@@ -49,9 +53,12 @@ export class AuthService {
           localStorage.setItem('token', resp.token!);
             this._usuario = {
               uid: resp.uid!,
-              nombre: resp.nombre!
+              nombre: resp.nombre!,
+              apellido: resp.apellido!,
+              telefono: resp.telefono!,
+              cp: resp.cp!,
+              correo: resp.correo!
             }
-            console.log(this._usuario);
         }
       }),
       map(resp => resp.ok),
@@ -71,7 +78,11 @@ export class AuthService {
           localStorage.setItem('token',resp.token!);
             this._usuario = {
               uid: resp.uid!,
-              nombre: resp.nombre!
+              nombre: resp.nombre!,
+              apellido: resp.apellido!,
+              telefono: resp.telefono!,
+              cp: resp.cp!,
+              correo: resp.correo!
             }     
           return resp.ok;
         }),
@@ -91,6 +102,26 @@ export class AuthService {
 
     const url = `${this.baseUrl}/users/user/${id} `;
     return this.http.get<{usuario:User}>(url, {headers})
+  }
+
+
+  actualizarUsuario(usuario:User){
+    const headers = new HttpHeaders()
+    .set('x-token', localStorage.getItem('token') || '');
+
+    const url = `${this.baseUrl}/users/user/${usuario._id} `;
+    return this.http.put(url,usuario, {headers});
+  }
+
+  actualizarPass(usuario:User){
+    const headers = new HttpHeaders()
+    .set('x-token', localStorage.getItem('token') || '');
+
+    const url = `${this.baseUrl}/users/pass/${usuario._id} `;
+    return this.http.put<AuthResponse>(url,usuario, {headers}).pipe(
+      map(resp => resp.ok),
+      catchError(err => of(err.error.msg))
+    )
   }
 
 

@@ -54,3 +54,14 @@
     background-color: black;
     border: none;
 }
+.p-modal{
+    margin: 0;
+    color:red;
+}
+.swal2-actions{
+    margin: 0!important;
+    padding: 0!important;
+}
+.btn-salir{
+    cursor: pointer;
+}

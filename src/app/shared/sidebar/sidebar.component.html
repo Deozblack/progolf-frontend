@@ -31,13 +31,13 @@
                         <h3 class="titulos">PERFIL</h3>
                     </a>
                 </li>
-                <li class="titulos-menu">
+                <li class="titulos-menu" (click)="modal()">
                     <button class="button-soporte" type="button" data-toggle="modal" data-target="#mediumModal">
                         <img src="../../../assets/images/icono-soporte.png">
                         <h3 class="titulos">SOPORTE</h3>
                     </button>
                 </li>
-                <li class="titulos-menu">
+                <li class="titulos-menu btn-salir">
                     <a (click)="logout()">
                         <img src="../../../assets/images/icono-salir.png">
                         <h3 class="titulos">SALIR</h3>

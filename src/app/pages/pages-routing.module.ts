@@ -6,6 +6,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { GolfComponent } from './golf/golf.component';
 import { AgendarComponent } from './agendar/agendar.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { LeccionesComponent } from './lecciones/lecciones.component';
+import { AgendaPersonalComponent } from './agenda-personal/agenda-personal.component';
 
 const routes: Routes = [
   {
@@ -27,6 +29,14 @@ const routes: Routes = [
       {
         path:'perfil',
         component:PerfilComponent
+      },
+      {
+        path:'lecciones',
+        component:LeccionesComponent
+      },
+      {
+        path:'agenda-personal',
+        component:AgendaPersonalComponent
       },
       {
         path:'**',

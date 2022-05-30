@@ -1,0 +1,67 @@
+
+.main-content {
+    padding-top: 116px;
+    min-height: 100vh;
+}
+.index-banner3 {
+    background-image: url('../../../assets/images/banner-web-7.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section__content--p30 {
+    padding: 0 30px;
+}
+.text-white {
+    color: #fff!important;
+}
+.card {
+    margin-bottom: 30px;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #53b42d;
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.form-group {
+    margin-bottom: 1rem;
+}
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.text-right {
+    text-align: right!important;
+}
+.card-footer:last-child {
+    border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
+}
+.btn-dark:hover {
+    color: #fff;
+    background-color: #23272b;
+    border-color: #1d2124;
+}
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+}
+.tipos, .tipos2, .tipos-2 {
+    text-align: center;
+    background: #5f5e59;
+    padding: 4%;
+    border-radius: 0px;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}
+a:link{
+    text-decoration: none;
+}
+.text-h1{
+    font-weight: 700;
+}

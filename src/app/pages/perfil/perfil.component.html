@@ -1,11 +1,10 @@
-<div class="main-content index-banner2">
+<div class="main-content index-banner2 animate__animated animate__fadeIn animate__fast">
   <div class="section__content section__content--p30">
     <div class="container-fluid">
       <h1 class="text-white mb-5">Mi Perfil</h1>
       <div class="row">
         <div class="col-lg-6">
-          <form class="form-horizontal"
-          >
+          <form class="form-horizontal" [formGroup]="userForm" (ngSubmit) = "guardarInfoPersonal()">
             <div class="card">
               <div class="card-header">
                 <strong>Información Personal</strong>
@@ -24,7 +23,8 @@
                       name="nombre"
                       class="form-control"
                       placeholder="Nombre"
-                      value="{{usuarioSelect.nombre}}"
+                      value="{{usuario.nombre}}"
+                      formControlName = "nombre"
                     />
                   </div>
                 </div>
@@ -41,7 +41,7 @@
                       name="apellido"
                       placeholder="Apellido"
                       class="form-control"
-                      value="{{usuarioSelect.apellido}}"
+                      formControlName = "apellido"
                     />
                   </div>
                 </div>
@@ -58,7 +58,7 @@
                       name="telefono"
                       class="form-control"
                       placeholder="Teléfono"
-                      value="{{usuarioSelect.telefono}}"
+                      formControlName = "telefono"
                     />
                   </div>
                 </div>
@@ -71,10 +71,11 @@
                   <div class="col-12 col-md-9">
                     <input
                       type="date"
-                      id="Fecha"
-                      name="fecha"
+                      id="date"
+                      name="date"
                       class="form-control"
-                      value="0000-00-00"
+                      value=""
+                      formControlName = "date"
                     />
                   </div>
                 </div>
@@ -91,6 +92,7 @@
                       name="direccion"
                       class="form-control"
                       placeholder="Dirección"
+                      formControlName = "direccion"
                     />
                   </div>
                 </div>
@@ -107,7 +109,7 @@
                       name="cp"
                       class="form-control"
                       placeholder="Código postal"
-                      value="{{usuarioSelect.cp}}"
+                      formControlName = "cp"
                     />
                   </div>
                 </div>
@@ -124,6 +126,7 @@
                       name="estado"
                       class="form-control"
                       placeholder="Estado"
+                      formControlName = "estado"
                     />
                   </div>
                 </div>
@@ -140,6 +143,7 @@
                       name="ciudad"
                       class="form-control"
                       placeholder="Ciudad"
+                      formControlName = "ciudad"
                     />
                   </div>
                 </div>
@@ -153,10 +157,7 @@
           </form>
         </div>
         <div class="col-lg-6">
-          <form
-            action="php/actions/modificar-contrasena.php"
-            method="post"
-            class="form-horizontal"
+          <form class="form-horizontal" [formGroup]="passForm" (ngSubmit) = "guardarPass($event)"
           >
             <div class="card">
               <div class="card-header">
@@ -175,6 +176,7 @@
                       name="old"
                       class="form-control"
                       required=""
+                      formControlName = "oldPassword"
                     />
                   </div>
                 </div>
@@ -190,6 +192,7 @@
                       name="new"
                       class="form-control"
                       required=""
+                      formControlName = "newPassword"
                     />
                   </div>
                 </div>
@@ -205,6 +208,7 @@
                       name="confirmar"
                       class="form-control"
                       required=""
+                      formControlName = "repPassword"
                     />
                   </div>
                 </div>

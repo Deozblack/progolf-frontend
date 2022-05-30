@@ -1,0 +1,56 @@
+
+.main-content {
+    padding-top: 116px;
+    min-height: 100vh;
+}
+.index-banner1 {
+    background-image: url('../../../assets/images/banner-web-1.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section__content--p30 {
+    padding: 0 30px;
+}
+.section__content {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+p {
+    margin: 0;
+}
+.display {
+    display: inline-block;
+}
+.card {
+    margin-bottom: 30px;
+}
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+.card-header {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 0;
+    background-color: #53b42d;
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+.card-title {
+    margin-bottom: 0.75rem;
+}
+.capitalizar {
+    text-transform: capitalize;
+}
+strong {
+    font-weight: 700;
+}
+p{
+    color:#666;
+    font-size: 18px;
+}
+.text-h1{
+    font-weight: 700;
+}
+.float-right {
+    float: right!important;
+}

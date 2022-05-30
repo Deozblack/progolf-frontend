@@ -1,0 +1,40 @@
+
+.main-content {
+    padding-top: 116px;
+    min-height: 100vh;
+}
+.index-banner4 {
+    background-image: url('../../../assets/images/banner-web-6.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section__content--p30 {
+    padding: 0 30px;
+}
+.section__content {
+    position: relative;
+    margin: 0 auto;
+    z-index: 1;
+}
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.display {
+    display: inline-block;
+}
+.btn {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+h4 {
+    font-size: 18px;
+    font-weight:700;
+}
+.text-h1{
+    font-weight:700;
+}
